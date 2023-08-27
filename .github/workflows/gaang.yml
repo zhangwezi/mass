@@ -18,7 +18,7 @@ jobs:
       - name: Remove default Chromium
         run: sudo apt purge chromium-browser
       - name: Install a new Chrome Original
-        run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb > /dev/null 2>&1 && sudo dpkg -i google-chrome-stable_current_amd64.deb > /dev/null 2>&1 && apt --fix-broken install > /dev/null 2>&1
+        run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb && apt --fix-broken install
       - name: Install all necessary packages
         run: pip install selenium-wire requests beautifulsoup4 pandas webdriver-manager selenium
       - name: Run the scraping script
